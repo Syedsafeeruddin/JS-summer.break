@@ -32,23 +32,35 @@
 // }
 
 // BREAK Keyword
-for (let index = 0; index <= 19; index++) {
-    if (index == 9) {
-        console.log("Number 9 detected, loops break!");
-        break
-    }
-    const element = index;
-    console.log(element);
+// for (let index = 0; index <= 19; index++) {
+//     if (index == 9) {
+//         console.log("Number 9 detected, loops break!");
+//         break
+//     }
+//     const element = index;
+//     console.log(element);
     
-}
-console.log('---------------------------------------------------------------------------');
+// }
+// console.log('---------------------------------------------------------------------------');
 // CONTINUE Keyword
-for (let index = 1; index <= 20; index++) {
-    if (index == 10) {
-        console.log("Number 10 detected");
-        continue
-    }
-    const element = index;
-    console.log(element);
+// for (let index = 1; index <= 20; index++) {
+//     if (index == 10) {
+//         console.log("Number 10 detected");
+//         continue
+//     }
+//     const element = index;
+//     console.log(element);
     
-}
+// }
+
+// let num = 0;
+// while (num <= 15) {
+//     console.log(`Answer is ${num}`);
+//     num = num + 3;
+// }
+
+let abc = 1;
+do {
+    console.log("Hallo");
+    abc++
+} while (abc <= 10);
