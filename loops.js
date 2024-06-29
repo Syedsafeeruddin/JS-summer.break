@@ -59,8 +59,31 @@
 //     num = num + 3;
 // }
 
-let abc = 1;
-do {
-    console.log("Hallo");
-    abc++
-} while (abc <= 10);
+// let abc = 1;
+// do {
+//     console.log("Hallo");
+//     abc++
+// } while (abc <= 10);
+
+// const myArray = [1,2,3,4,5]
+
+// for (const index of myArray) {
+//     console.log(index);
+// }
+
+
+// const name = 'Syed Safeer Uddin'
+// for (const names of name) {
+//     if (names == " ") {
+//         console.log("space found");
+//         continue
+//     }
+//     console.log(`Letters are ${names}`);
+// }
+
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "no";
+for (let x in numbers) {
+  txt += numbers[x]; 
+}
