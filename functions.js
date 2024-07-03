@@ -57,3 +57,22 @@
 // const addTwo = (num1, num2) => console.log((num1 + num2)) // implicit return, here we can't use return keyword
 
 // addTwo(4,4)
+
+// Immedialy Invoked Function Expression (IIFE)
+
+// function myFunction(){
+//     console.log("Hallo"); // This is a simple function with its execution
+// }
+// myFunction()
+
+// IIFE
+
+// (function myFunction(){
+//     console.log("Hello"); // For IIFE we wrap our function around with '()' with (execution) immediately after
+// })()
+
+// a semi-colon is a must after IIFE 
+
+( (name) => {
+    console.log(`Hello ${name}`);
+})('Safeer')
