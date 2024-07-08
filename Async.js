@@ -28,3 +28,59 @@
 // Blocking Code vs Non-blocking Code
 // 1. Blocking code blocks the execution of program to read file while the non-blocking code continues the execution of the program 
 //  while it reads a file 
+// ----------------------------------------------------------------------------------------------------------------------------------
+
+//  Following is the example of Async programming
+// console.log("H");
+// console.log("He");
+// setTimeout(() => {  // (setTimeout) esa function jo time leta hai, 1 sec = 1000 ms
+//     console.log("bhaggg"); 
+// }, 3000)
+// console.log("Hel");
+// console.log("Hell");
+// console.log("Hello");
+
+// CALLBACK is an argument to another function 
+
+// function Add(a, b) {
+//     console.log(a + b);
+// }
+
+// function Greetings (a, b, AddCallback){
+//     AddCallback(a,b);
+// }
+
+// Greetings(5,4,Add);
+
+
+// function getData(DataID, NextData){
+//     setTimeout(() => {
+//         console.log(`Data : ${DataID}`);
+//         if(NextData){
+//             NextData();
+//         }
+//     }, 2000)
+// }
+
+// // This is Callback Hell (Nested Callbacks)
+// getData(1, () => {
+//     getData(2, () => {
+//         getData(3)
+//     })
+// })
+
+// PROMISE is an Object in Javascript having 3 states pending, result, reject 
+
+// let promise = new Promise((resolve, reject) => {
+//     console.log("I'm a promise");
+//     resolve("DONE")
+//     reject("ERROR 404")
+// })
+
+// console.log(promise);
+
+
+
+
+
+
