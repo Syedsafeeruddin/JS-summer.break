@@ -2,6 +2,7 @@
 // it is a single threaded language, these are the behaviour of Default Javascript
 
 
+
 // ----------- EXECUTION CONTEXT ------------
 // javascript runs a file in two phases ---> Memory Creation Phase, Execution Phase
 // 1. Global Execution Context (this KEYWORD) 
@@ -79,6 +80,87 @@
 
 // console.log(promise);
 
+// function getData(DataID, NextData){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log(`Data : ${DataID}`);
+//             resolve("Success");
+//             if(NextData){
+//                 NextData();
+//             }
+//         }, 2000)
+//     })
+// }
+
+// getData(1, () => {
+//     getData(2, () => {
+//         getData(3)
+//     })
+// })
+
+// const getPromise = () => {
+//     return new Promise((resolve, reject) => {
+//         console.log('This is a promise');
+//         // resolve('--- Success')
+//         reject('--- Error')
+//     })
+// }
+
+// let newPromise = getPromise();
+// newPromise.then((res) => {
+//     console.log("Successfull", res);  // .then if promise is resolved
+// })  
+
+// newPromise.catch((err) => {
+//     console.log("Error 404", err);  // .catch if promise is reject
+// })
+
+// function AsyncFun1() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("DATA1");
+//             resolve('suss')
+//         }, 3000)
+//     })
+// }
+
+// function AsyncFun2() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("data2");
+//             resolve('suss')
+//         }, 3000)
+//     })
+// }
+
+
+// AsyncFun1().then((res) => {
+//     console.log("Fetching Data");
+//     AsyncFun2().then((res) => {
+//         console.log("Fetching Data");
+//     })
+// })
+// AsyncFun();
+
+
+function getData(DataID, NextData){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log(`Data : ${DataID}`);
+            resolve("Success");
+            if(NextData){
+                NextData();
+            }
+        }, 2000)
+    })
+}
+
+getData(15723).then((res) => {
+    console.log(res);
+    getData(15925).then((res) => {
+        console.log(res);
+    })
+})
 
 
 
