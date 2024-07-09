@@ -1,6 +1,8 @@
 // Javascript is synchronous language that means its code is executed one line at a time
 // it is a single threaded language, these are the behaviour of Default Javascript
 
+// const { reject } = require("async");
+
 
 
 // ----------- EXECUTION CONTEXT ------------
@@ -143,24 +145,132 @@
 // AsyncFun();
 
 
-function getData(DataID, NextData){
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log(`Data : ${DataID}`);
-            resolve("Success");
-            if(NextData){
-                NextData();
-            }
-        }, 2000)
-    })
-}
+// function getData(DataID, NextData){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log(`Data : ${DataID}`);
+//             resolve("Success");
+//             if(NextData){
+//                 NextData();
+//             }
+//         }, 2000)
+//     })
+// }
 
-getData(15723).then((res) => {
-    console.log(res);
-    getData(15925).then((res) => {
-        console.log(res);
-    })
-})
+// PROMISE Chanining where we nest promises  in promises
+
+// getData(15723).then((res) => {
+//     console.log(res);
+//     getData(15925).then((res) => {
+//         console.log(res);
+//     })
+// })
+
+
+// function getData(DataID, NextData){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log(`Data : ${DataID}`);
+//             resolve("Success");
+//             if(NextData){
+//                 NextData();
+//             }
+//         }, 2000)
+//     })
+// }
+
+
+// getData(15723).then((res) => {
+//     console.log(res);
+// })
+// .then((res) => {
+//     // console.log(res);
+//     return getData(12925)
+// })
+// .then((res) => {
+//     console.log(res);
+//     return getData(18373)
+// })
+
+// ASYNC/AWAIT 
+// Async always returns a promise
+
+// async function myFunction(){
+//     console.log("Success");
+// }
+
+// myFunction();
+
+// function greetings(){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//         console.log("Greeting is Hello");
+//         resolve("Success")
+//         }, 2000)
+//     });
+// }
+
+// async function getGreetings(){
+//     await greetings();
+//     await greetings();
+// }
+
+// getGreetings()
+
+
+// function getData(DataID){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log(`Data : ${DataID}`);
+//             resolve("Success");
+//         }, 2000)
+//     })
+// }
+
+// async function gettingData(){
+//     console.log("Getting Data 1");
+//     await getData(15723);
+//     console.log("Getting Data 2");
+//     await getData(19725);
+//     console.log("Getting Data 3");
+//     await getData(12435);
+// }
+
+// gettingData()
+
+
+// function getData(DataID){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log(`Data : ${DataID}`);
+//             resolve("Success");
+//         }, 2000)
+//     })
+// }
+
+// // Async Function in IIFE
+
+// (async function () {
+//     console.log("Getting Data 1");
+//     await getData(15723);
+//     console.log("Getting Data 2");
+//     await getData(19725);
+//     console.log("Getting Data 3");
+//     await getData(12435);
+// })()
+
+
+// (function myFun(name){
+//     console.log(`${name }`)
+// })('safeer')
+
+
+
+
+
+
+
+
 
 
 
