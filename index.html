@@ -13,6 +13,10 @@
     </style>
   </head>
   <body>
+
+    <ul class="language">
+      <li>Java</li>
+    </ul>
     <!-- <div class="parent">
       <div class="day">Monday</div>
       <div class="day">Tuesday</div>
@@ -42,19 +46,25 @@
 
     // CREATING A NEW ELEMENT IN DOM
 
-    const div = document.createElement('div'); // Create an element instead of an attribute
-div.className = "Box";
-div.id = "Main-Box";
-div.setAttribute("title", "demoTitle");
-div.style.backgroundColor = "blue";
-div.style.padding = "25px";
-div.innerHTML = "Hello this is a web page";
+// const div = document.createElement('div'); // Create an element instead of an attribute
+// div.className = "Box";
+// div.id = "Main-Box";
+// div.setAttribute("title", "demoTitle");
+// div.style.backgroundColor = "blue";
+// div.style.padding = "25px";
+// div.innerHTML = "Hello this is a web page";
 
-// Correct way to add text
-const addText = document.createTextNode("Hello this is a web page");
-div.appendChild(addText);
+// // Correct way to add text
+// const addText = document.createTextNode("Hello this is a web page");
+// div.appendChild(addText);
 
-document.body.appendChild(div);
+// document.body.appendChild(div);
 
+function AddLingo(Lingo){
+  const myList = document.createElement('li')
+  myList.innerHTML = `${Lingo}`;
+  document.querySelector('.language').appendChild(myList)
+}
+AddLingo("Python");
   </script>
 </html>
